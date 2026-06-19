@@ -1,0 +1,8 @@
+#!/bin/bash
+
+img=$1
+
+awww img "$img" --transition-type center
+
+matugen image "$img" & /dev/null
+

@@ -1,0 +1,5 @@
+@define-color accent {{ accent }};
+@define-color background {{ background }};
+@define-color foreground {{ foreground }};
+@define-color surface {{ surface }};
+@define-color on_surface {{ on_surface }};

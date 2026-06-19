@@ -1,0 +1,136 @@
+@import "/launchers/type-1/shared/colors.rasi"
+@import "/launchers/type-1/shared/fonts.rasi"
+
+* {
+    border-colour:               var(selected);
+    handle-colour:               var(selected);
+    background-colour:           var(background);
+    foreground-colour:           var(foreground);
+    alternate-background:        var(background-alt);
+
+    normal-background:           var(background);
+    normal-foreground:           var(foreground);
+
+    selected-normal-background:  var(selected);
+    selected-normal-foreground:  var(background);
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       600px;
+    border-radius:               10px;
+    background-color:            @background-colour;
+    cursor:                      "default";
+}
+
+mainbox {
+    spacing:                     10px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    spacing:                     10px;
+    padding:                     8px 12px;
+    border-radius:               8px;
+    background-color:            @alternate-background;
+    text-color:                  @foreground-colour;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    str:                         " ";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+entry {
+    padding:                     5px 0px;
+    background-color:            inherit;
+    text-color:                  inherit;
+    placeholder:                 "Escolha uma rede...";
+    placeholder-color:           inherit;
+}
+
+listview {
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    spacing:                     5px;
+    background-color:            transparent;
+    text-color:                  @foreground-colour;
+}
+
+scrollbar {
+    handle-width:                5px;
+    handle-color:                @handle-colour;
+    border-radius:               10px;
+    background-color:            @alternate-background;
+}
+
+element {
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               8px;
+    background-color:            @normal-background;
+    text-color:                  @normal-foreground;
+    cursor:                      pointer;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+message {
+    background-color:            transparent;
+    text-color:                  @foreground-colour;
+}
+
+textbox {
+    padding:                     12px;
+    border-radius:               8px;
+    background-color:            @alternate-background;
+    text-color:                  @foreground-colour;
+}
+
+element normal.normal,
+element alternate.normal,
+element normal.active,
+element alternate.active,
+element normal.urgent,
+element alternate.urgent {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element selected.normal,
+element selected.active,
+element selected.urgent {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element normal.normal element-text,
+element alternate.normal element-text,
+element normal.active element-text,
+element alternate.active element-text,
+element normal.urgent element-text,
+element alternate.urgent element-text {
+    text-color: @normal-foreground;
+}
+
+element selected.normal element-text,
+element selected.active element-text,
+element selected.urgent element-text {
+    text-color: @selected-normal-foreground;
+}

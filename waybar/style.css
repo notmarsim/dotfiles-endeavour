@@ -1,0 +1,83 @@
+@import "colors.css";
+
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans CJK JP", "SF Pro Display",Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    
+    color: @on_surface;
+}
+
+tooltip {
+  background: black;
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: @on_surface;
+}
+
+#workspaces button {
+    font-family: "Noto Sans CJK JP", "JetBrainsMono Nerd Font", sans-serif;
+    padding: 5px 15px;
+    margin: 7px;
+    border-radius: 200px;
+    background: transparent;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid transparent;
+    
+}
+
+#workspaces button.focused {
+    background-color: black;
+    color: black;
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+#workspaces button.active {
+    background-color: black;
+    color: white;
+}
+
+#mpris {
+    padding: 5px 15px;
+    margin: 7px;
+    border-radius: 200px;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+#battery,
+#bluetooth,
+#backlight {
+    padding: 5px 15px;
+    margin: 7px;
+    border-radius: 200px;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+#memory,
+#cpu,
+#pulseaudio,
+#clock,
+#network{
+    padding: 5px 15px;
+    margin: 7px;
+    border-radius: 200px;
+    background: transparent;
+    background-color: white;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+

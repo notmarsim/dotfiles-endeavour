@@ -1,0 +1,5 @@
+brave-bin
+grimblast-git
+sddm-sugar-candy-git
+vesktop
+wlogout
